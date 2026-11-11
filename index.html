@@ -1,9 +1,198 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <form action="/traitement" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend><strong>Identité & Sécurité</strong></legend>
+        <ul>
+          <label for="nom">Nom:</label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            placeholder="Donne vite ton nom"
+            required
+          />
+        </ul>
+        <ul>
+          <label for="prenom">Prenom</label>
+          <input type="text" id="prenom" name="prenom" autofocus required />
+        </ul>
+        <ul>
+          <label for="mdp">Mot de passe</label>
+          <input
+            type="password"
+            minlength="8"
+            id="mdp"
+            name="motdepasse"
+            placeholder="Reste focus!"
+          />
+        </ul>
+        <ul>
+          <label for="photo">Photo de profil</label>
+          <input type="file" accept=".jpg,.png" id="photo" name="photo" />
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend><strong>Contact & Profil</strong></legend>
+        <ul>
+          <label for="email pro">Ton email</label>
+          <input
+            type="email"
+            id="email pro"
+            name="email"
+            pattern="Rentre ton email!"
+          />
+        </ul>
+        <ul>
+          <label for="tel">Telephone</label>
+          <input
+            type="tel"
+            id="tel"
+            name="telephone"
+            pattern="0[1-9](?:[0-9]{2}){4}"
+          />
+        </ul>
+        <ul>
+          <label for="site web">Site web</label>
+          <input type="url" id="site web" name="site web" />
+        </ul>
+        <ul>
+          <label for="color">Couleur</label>
+          <input type="color" id="color" name="color" value="#412484" />
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend><strong>Informations Personnelles</strong></legend>
+        <ul>
+          <label for="annees">Années d'experiences</label>
+          <input
+            type="number"
+            id="annees"
+            name="Années d'expériences"
+            min="0"
+            max="50"
+          />
+        </ul>
+        <ul>
+          <label for="tjm">Taux journaliers moyen</label>
+          <input
+            type="number"
+            id="tjm"
+            name="Taux journaliers moyen"
+            step="50"
+          />
+        </ul>
+        <ul>
+          <label for="nv senior">Niveau de Séniorité estimé</label>
+          <input
+            type="range"
+            id="nv senior"
+            name="Niveau de Séniorité"
+            min="1"
+            max="5"
+          />
+        </ul>
+        <section>
+          <h3>Langages maîtrisés</h3>
+          <ul>
+            <label for="html">html</label>
+            <input type="checkbox" id="html" name="langage" required />
+          </ul>
+          <ul>
+            <label for="css">css</label>
+            <input type="checkbox" id="css" name="langage" />
+          </ul>
+          <ul>
+            <label for="javascript">javascript</label>
+            <input type="checkbox" id="javascript" name="langage" />
+          </ul>
+          <ul>
+            <label for="php">php</label>
+            <input type="checkbox" id="php" name="langage" />
+          </ul>
+        </section>
+        <section>
+          <h3>Statut Juridique</h3>
+          <ul>
+            <label for="auto-e">Auto-entrepreneur</label>
+            <input
+              type="radio"
+              id="auto-e"
+              name="Auto-entrepreneur"
+              value="Auto-entrepreneur"
+            />
+          </ul>
+          <ul>
+            <label for="sasu">SASU</label>
+            <input type="radio" id="sasu" name="SASU" value="SASU" />
+          </ul>
+          <ul>
+            <label for="eurl">EURL</label>
+            <input type="radio" id="eurl" name="EURL" value="EURL" />
+          </ul>
+        </section>
+        <select name="regions" id="regions" multiple="multiple">
+          <optgroup label="Régions">
+            <option value="grand nord">Grand nord</option>
+            <option value="grand ouest">Grand ouest</option>
+            <option value="grand est">Grand est</option>
+            <option value="grand sud">Grand sud</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend><strong>Disponibilités & Finalisations</strong></legend>
+        <section>
+          <ul>
+            <label for="date">Date de disponibilité</label>
+            <input
+              type="date"
+              id="date"
+              name="Date de disponibilité"
+              value="2026-11-11"
+            />
+          </ul>
+          <ul>
+            <label for="texte">Texte</label>
+            <input
+              type="text"
+              id="texte"
+              name="Texte"
+              value="Non realisé"
+              disabled
+            />
+          </ul>
+          <ul>
+            <label for="motivation">Motivation</label>
+            <textarea
+              id="motivation"
+              name="Motivation"
+              rows="8"
+              maxlength="5OO"
+              placeholder="Ecrit ton message"
+            ></textarea>
+          </ul>
+          <h4><label for="cgu">Les conditions d'utilisation</label></h4>
+          <p>J'accepte les conditions d'utilisation pour continuer.</p>
+          <input type="checkbox" id="cgu" name="CGU" required />
+          <ul>
+            <button type="submit">Envoyez le formulaire.</button>
+            <button type="reset">Effacez le formulaire</button>
+          </ul>
+        </section>
+      </fieldset>
+    </form>
+    <footer>
+      <p>
+        &copy; 2026 - Tous droits reservés et crée avec amour du HTML5 et des
+        Kebabs.
+      </p>
+    </footer>
+  </body>
 </html>
